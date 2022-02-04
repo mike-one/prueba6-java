@@ -31,6 +31,9 @@ public class CuencaClient {
     public HttpResponse<String> get(String endpoint) throws Exception {
         return request("GET", endpoint, "");
     }
+    public HttpResponse<String> get(String endpoint, Integer num) throws Exception {
+        return request("GET", endpoint, "");
+    }
     public HttpResponse<String> get(String endpoint, String body) throws Exception {
         return request("GET", endpoint, body);
     }
