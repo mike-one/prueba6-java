@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="CuencaJava" />
         <module name="cuenca-java" />
+        <module name="example" />
       </profile>
     </annotationProcessing>
   </component>
