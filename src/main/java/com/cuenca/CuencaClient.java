@@ -33,6 +33,9 @@ public class CuencaClient {
     public HttpResponse<String> get(String endpoint, String body) throws Exception {
         return request("GET", endpoint, body);
     }
+    public HttpResponse<String> get(String endpoint, int number) throws Exception {
+        return request("GET", endpoint, "");
+    }
 
     public HttpResponse<String> patch(String endpoint, String body) throws Exception {
         return request("PATCH", endpoint, body);
