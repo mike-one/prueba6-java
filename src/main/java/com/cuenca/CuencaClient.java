@@ -23,12 +23,16 @@ public class CuencaClient {
         this.client = client;
     }
 
+
     public HttpResponse<String> post(String endpoint, String body) throws Exception {
         return request("POST", endpoint, body);
     }
 
     public HttpResponse<String> get(String endpoint) throws Exception {
         return request("GET", endpoint, "");
+    }
+    public HttpResponse<String> get(String endpoint, String body) throws Exception {
+        return request("GET", endpoint, body);
     }
 
     public HttpResponse<String> patch(String endpoint, String body) throws Exception {
@@ -38,6 +42,11 @@ public class CuencaClient {
     public HttpResponse<String> delete(String endpoint) throws Exception {
         return request("DELETE", endpoint, "");
     }
+
+    public HttpResponse<String> delete(String endpoint, String body) throws Exception {
+        return request("DELETE", endpoint, body);
+    }
+
 
     private HttpResponse<String> request(String method, String endpoint, String body) throws Exception {
         if (client == null)
